@@ -1,0 +1,28 @@
+/* Main app*/
+.header {
+  background: #fff;
+  padding-top: 12px;
+}
+.content {
+  margin: 24px 16px;
+  padding: 24px;
+  background: #fff;
+  min-height: 280px;
+}
+/* Sidebar */
+.sider {
+  background: #001529;
+  color: #fff;
+  height: 100vh;
+  position: sticky !important;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+}
+.logo {
+  margin: 30px 0;
+  background: #fff;
+  color: #4f6f52;
+  font-size: 1.5rem;
+}
