@@ -5,6 +5,18 @@ export interface Video {
   videoTitle: string; // Lưu ý: MockAPI của bạn đang dùng 'videoTitle'
   url: string;
   createdAt?: string; // Trường này MockAPI tự sinh, có thể dùng để sort
+  chapters?: VideoChapter[];
+}
+
+export interface VideoChapter {
+  time: string;
+  label: string;
+}
+
+export interface CreateVideoPayload {
+  videoTitle: string;
+  url: string;
+  chapters?: VideoChapter[];
 }
 
 // 2. DTO (Data Transfer Object): Dữ liệu gửi đi để tạo mới / cập nhật

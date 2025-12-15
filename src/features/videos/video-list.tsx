@@ -4,6 +4,7 @@ import {
   EditOutlined,
   PlusOutlined,
   VideoCameraOutlined,
+  UnorderedListOutlined,
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import type { ColumnsType } from "antd/es/table";
@@ -39,6 +40,21 @@ const VideoList: React.FC = () => {
           <span style={{ fontWeight: 500 }}>{text}</span>
         </Space>
       ),
+    },
+    {
+      title: "Chapters",
+      dataIndex: "chapters",
+      render: (chapters) => {
+        if (!chapters || chapters.length === 0) {
+          return <Tag color="red">Chưa có</Tag>;
+        }
+        return (
+          <Space>
+            <UnorderedListOutlined style={{ color: "green" }} />
+            <span>{chapters.length} chapter(s)</span>
+          </Space>
+        );
+      },
     },
     {
       title: "Người tạo",
